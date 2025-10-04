@@ -1,58 +1,26 @@
-.searchbar {
-  top: 0;
-  left: 0;
-  position: sticky;
-  z-index: 1100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 64px;
-  padding: 12px 24px;
-  color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(40, 0, 60, 0.95);
-  box-shadow: 0px 2px 6px rgba(120, 0, 180, 0.5),
-              0px 4px 12px rgba(0, 0, 0, 0.6);
-}
+.search-form {
+  margin: 20px 0;
+  text-align: center;
 
-.form {
-  display: flex;
-  align-items: center;
-  background-color: rgba(20, 20, 20, 0.9);
-  border-radius: 6px;
-  overflow: hidden;
-  max-width: 600px;
-  width: 100%;
-  box-shadow: 0 0 12px rgba(130, 0, 200, 0.4);
-}
+  input {
+    padding: 8px 12px;
+    width: 250px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-right: 8px;
+  }
 
-.button {
-  background: transparent;
-  border: none;
-  padding: 0 12px;
-  cursor: pointer;
-  font-size: 18px;
-  color: rgba(180, 120, 255, 0.9); 
-  transition: color 0.3s ease;
-}
+  button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(95, 48, 95);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
 
-.button:hover {
-  color: rgba(255, 0, 255, 1); 
-}
-
-.button-label {
-  display: inline-block;
-}
-
-.input {
-  width: 100%;
-  padding: 10px 12px;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: rgba(255, 255, 255, 0.9);
-  background-color: transparent; 
-}
-
-.input::placeholder {
-  color: rgba(200, 150, 255, 0.5); 
+    &:hover {
+      background-color: #a020f0;
+    }
+  }
 }

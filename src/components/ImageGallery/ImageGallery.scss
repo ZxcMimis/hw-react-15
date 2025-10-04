@@ -1,3 +1,4 @@
+
 .gallery {
   display: flex;
   gap: 30px;
@@ -8,7 +9,7 @@
   background-color: rgba(20, 20, 20, 0.95);
   border-radius: 10px;
   position: relative;
-  box-shadow: 0 0 25px rgba(120, 0, 180, 0.3); 
+  box-shadow: 0 0 25px rgba(120, 0, 180, 0.3);  
 }
 
 .gallery-item {
@@ -16,28 +17,85 @@
   width: 265px;
   border-radius: 8px;
   overflow: hidden;
-  background-color: rgba(40, 0, 60, 0.8); 
+  background-color: rgba(40, 0, 60, 0.8);  
   box-shadow: 0 0 12px rgba(120, 0, 180, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 18px rgba(180, 0, 255, 0.7);
+  }
+
+  button {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgba(200, 150, 255, 0.9);
+    font-size: 16px;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: rgba(255, 0, 255, 1);  
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 260px; 
+        object-fit: cover;
+    }
+  }
 }
 
-.gallery-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 18px rgba(180, 0, 255, 0.7);
+
+.load-more-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: rgba(120, 0, 180, 1);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover,
+    &:focus {
+        background-color: rgba(180, 0, 255, 1);
+        box-shadow: 0 4px 15px rgba(180, 0, 255, 0.6);
+    }
 }
 
-.gallery-item button {
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: rgba(200, 150, 255, 0.9);
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
 
-.gallery-item button:hover {
-  color: rgba(255, 0, 255, 1); 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+
+    & > div {
+        max-width: 90%;
+        max-height: 90%;
+        
+        & > img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 40px rgba(180, 0, 255, 0.8);
+        }
+    }
 }
